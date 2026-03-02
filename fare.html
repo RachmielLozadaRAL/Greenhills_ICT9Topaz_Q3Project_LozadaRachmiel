@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fare Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Homepage.html">eSakay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-5">
+        <h2>Fare Calculation</h2>
+        <p>Enter your pickup and drop-off locations along with the distance to compute the total fare.</p>
+        <form id="fareForm" onsubmit="calculateFare(event)">
+            <div class="mb-3">
+                <label for="pickup" class="form-label">Pickup Location</label>
+                <input type="text" id="pickup" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="dropoff" class="form-label">Drop-off Location</label>
+                <input type="text" id="dropoff" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="distance" class="form-label">Distance (km)</label>
+                <input type="number" id="distance" class="form-control" min="0" step="0.1" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </main>
+    <footer class="bg-light text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 eSakay. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="proj.js"></script>
+</body>
+</html>
